@@ -21,7 +21,7 @@ const fillConfigValues = (near, nojs, dark) => {
     xhrGET.open("GET", "/config");
     xhrGET.onload = function() {
         if (xhrGET.readyState === 4 && xhrGET.status !== 200) {
-            alert("Error loading Whoogle config");
+            alert("Error loading Boogle config");
             return;
         }
 
@@ -48,7 +48,7 @@ const fillConfigValues = (near, nojs, dark) => {
 }
 
 const setupConfigLayout = () => {
-    // Setup whoogle config
+    // Setup boogle config
     const collapsible = document.getElementById("config-collapsible");
     collapsible.addEventListener("click", function() {
         this.classList.toggle("active");
