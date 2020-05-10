@@ -137,7 +137,7 @@ def window():
 
 
 def run_app():
-    parser = argparse.ArgumentParser(description='Whoogle Search console runner')
+    parser = argparse.ArgumentParser(description='Boogle Search console runner')
     parser.add_argument('--port', default=8888, metavar='<port number>',
                         help='Specifies a port to run on (default 8888)')
     parser.add_argument('--host', default='127.0.0.1', metavar='<ip address>',
