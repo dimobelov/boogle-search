@@ -1,7 +1,7 @@
 #!/bin/bash
 # Usage:
-# ./whoogle-search # Runs the full web app
-# ./whoogle-search test # Runs the testing suite
+# ./boogle-search # Runs the full web app
+# ./boogle-search test # Runs the testing suite
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -P)"
 
