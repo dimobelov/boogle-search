@@ -1,9 +1,4 @@
-# Whoogle Search
-
-[![Latest Release](https://img.shields.io/github/v/release/benbusby/whoogle-search)](https://github.com/benbusby/shoogle/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.com/benbusby/whoogle-search.svg?branch=master)](https://travis-ci.com/benbusby/whoogle-search)
-[![codebeat badge](https://codebeat.co/badges/e96cada2-fb6f-4528-8285-7d72abd74e8d)](https://codebeat.co/projects/github-com-benbusby-shoogle-master)
+# Boogle Search
 
 Get Google search results, but without any ads, javascript, AMP links, cookies, or IP address tracking. Easily deployable in one click as a Docker app, and customizable with a single config file. Quick and simple to implement as a primary search engine replacement on both desktop and mobile.
 
@@ -14,7 +9,7 @@ Contents
 4. [Usage](#usage)
 5. [Extra Steps](#extra-steps)
 6. [FAQ](#faq)
-7. [Screenshots](#screenshots)
+
 
 ## Features
 - No ads or sponsored content
@@ -47,14 +42,13 @@ If using Heroku Quick Deploy, **you can skip this section**.
 There are a few different ways to begin using the app, depending on your preferences:
 
 ### A) [Heroku Quick Deploy](https://heroku.com/about)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dimobelov/whoogle-search)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dimobelov/boogle-search)
 
 *Note: Requires a (free) Heroku account*
 
 Provides:
 - Free deployment of app
 - Free https url (https://\<your app name\>.herokuapp.com)
-- Downtime after periods of inactivity \([solution](https://github.com/benbusby/whoogle-search#prevent-downtime-heroku-only)\)
 
 ### B) [pipx](https://github.com/pipxproject/pipx#install-pipx)
 Persistent install: 
@@ -63,16 +57,16 @@ Persistent install:
 
 Sandboxed temporary instance: 
 
-`pipx run git+https://github.com/benbusby/whoogle-search.git whoogle-search`
+`pipx run git+https://github.com/dimobelov/boogle-search.git boogle-search`
 
 ### C) pip
-`pip install whoogle-search`
+`pip install boogle-search`
 
 ```bash
-$ whoogle-search --help
-usage: whoogle-search [-h] [--port <port number>] [--host <ip address>] [--debug]
+$ boogle-search --help
+usage: boogle-search [-h] [--port <port number>] [--host <ip address>] [--debug]
 
-Whoogle Search console runner
+Boogle Search console runner
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -85,12 +79,12 @@ optional arguments:
 Clone the repo and run the following commands to start the app in a local-only environment:
 
 ```bash
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/dimobelov/boogle-search.git
 cd whoogle-search
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-./whoogle-search
+./boogle-search
 ```
 
 ### E) Manual (Docker)
@@ -101,19 +95,19 @@ pip install -r requirements.txt
 
 #### Docker CLI
 ```bash
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/dimobelov/boogle-search.git
 cd whoogle-search
-docker build --tag whooglesearch:1.0 .
-docker run --publish 8888:5000 --detach --name whooglesearch whooglesearch:1.0
+docker build --tag booglesearch:1.0 .
+docker run --publish 8888:5000 --detach --name booglesearch booglesearch:1.0
 ```
 
-And kill with: `docker rm --force whooglesearch`
+And kill with: `docker rm --force booglesearch`
 
 #### Using [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 ```bash
 heroku login
 heroku container:login
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/dimobelov/boogle-search.git
 cd whoogle-search
 heroku create
 heroku container:push web
@@ -121,7 +115,7 @@ heroku container:release web
 heroku open
 ```
 
-This series of commands can take a while, but once you run it once, you shouldn't have to run it again. The final command, `heroku open` will launch a tab in your web browser, where you can test out Whoogle and even [set it as your primary search engine](https://github.com/benbusby/whoogle#set-whoogle-as-your-primary-search-engine).
+This series of commands can take a while, but once you run it once, you shouldn't have to run it again. The final command, `heroku open` will launch a tab in your web browser, where you can test out Whoogle and even [set it as your primary search engine](https://github.com/dimobelov/boogle-search#set-whoogle-as-your-primary-search-engine).
 
 #### Using your own server, or alternative container deployment
 There are other methods for deploying docker containers that are well outlined in [this article](https://rollout.io/blog/the-shortlist-of-docker-hosting/), but there are too many to describe set up for each here. Generally it should be about the same amount of effort as the Heroku deployment.
@@ -138,14 +132,14 @@ Same as most search engines, with the exception of filtering by time range.
 To filter by a range of time, append ":past <time>" to the end of your search, where <time> can be `hour`, `day`, `month`, or `year`. Example: `coronavirus updates :past hour`
 
 ## Extra Steps
-### Set Whoogle as your primary search engine
+### Set Boogle as your primary search engine
 Update browser settings:
   - Firefox (Desktop)
     - Navigate to your app's url, and click the 3 dot menu in the address bar. At the bottom, there should be an option to "Add Search Engine". Once you've clicked this, open your Firefox Preferences menu, click "Search" in the left menu, and use the available dropdown to select "Whoogle" from the list.
   - Firefox (iOS)
     - In the mobile app Settings page, tap "Search" within the "General" section. There should be an option titled "Add Search Engine" to select. It should prompt you to enter a title and search query url - use the following elements to fill out the form:
       - Title: "Whoogle"
-      - URL: "https://\<your whoogle url\>/search?q=%s"
+      - URL: "https://\<your boogle url\>/search?q=%s"
   - Others (TODO)
 
 ### Customizing and Configuration
@@ -178,10 +172,3 @@ I'm a huge fan of Searx though and encourage anyone to use that instead if they 
 **Why does the image results page look different?**
 
 A lot of the app currently piggybacks on Google's existing support for fetching results pages with Javascript disabled. To their credit, they've done an excellent job with styling pages, but it seems that the image results page - particularly on mobile - is a little rough. Moving forward, with enough interest, I'd like to transition to fetching the results and parsing them into a unique Whoogle-fied interface that I can style myself.
-
-## Screenshots
-#### Desktop
-![Whoogle Desktop](app/static/img/docs/screenshot_desktop.jpg)
-
-#### Mobile
-![Whoogle Mobile](app/static/img/docs/screenshot_mobile.jpg)
