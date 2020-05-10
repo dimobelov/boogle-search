@@ -6,7 +6,7 @@ requirements = list(open('requirements.txt', 'r'))
 
 setuptools.setup(
     author='Ben Busby',
-    author_email='benbusby@protonmail.com',
+    author_email='db@protonmail.com',
     name='boogle-search',
     version='0.1.0',
     scripts=['boogle-search'],
