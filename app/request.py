@@ -4,7 +4,7 @@ import pycurl
 import urllib.parse as urlparse
 
 # Base search url
-SEARCH_URL = 'https://www.google.com/search?gbv=1&num=50&q='
+SEARCH_URL = 'https://www.google.com/search?gbv=1&num=50&gl=bg&q='
 
 MOBILE_UA = '{}/5.0 (Android 0; Mobile; rv:54.0) Gecko/54.0 {}/59.0'
 DESKTOP_UA = '{}/5.0 (X11; {} x86_64; rv:75.0) Gecko/20100101 {}/75.0'
