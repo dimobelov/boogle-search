@@ -7,18 +7,18 @@ requirements = list(open('requirements.txt', 'r'))
 setuptools.setup(
     author='Ben Busby',
     author_email='benbusby@protonmail.com',
-    name='whoogle-search',
+    name='boogle-search',
     version='0.1.0',
-    scripts=['whoogle-search'],
+    scripts=['boogle-search'],
     include_package_data=True,
     install_requires=requirements,
     description='Self-hosted, ad-free, privacy-respecting alternative to Google search',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/benbusby/whoogle-search',
+    url='https://github.com/dimobelov/boogle-search',
     entry_points={
         'console_scripts': [
-            'whoogle-search=app.routes:run_app',
+            'boogle-search=app.routes:run_app',
         ]
     },
     packages=setuptools.find_packages(),
