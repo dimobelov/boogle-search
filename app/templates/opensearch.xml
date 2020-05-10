@@ -1,7 +1,7 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>Whoogle</ShortName>
-  <Description>Whoogle: A lightweight, deployable Google search proxy for desktop/mobile that removes Javascript, AMP links, and ads</Description>
+  <ShortName>Boogle</ShortName>
+  <Description>Boogle: A lightweight, deployable Google search proxy for desktop/mobile that removes Javascript, AMP links, and ads</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="32" height="32" type="image/x-icon">/static/img/favicon/favicon-32x32.png</Image>
   <Url type="text/html" method="post" template="{{ main_url }}/search">
